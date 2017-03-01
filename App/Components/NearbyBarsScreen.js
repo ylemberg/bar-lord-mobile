@@ -129,6 +129,7 @@ export default class NearbyBarScreen extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 // const mapStateToProps = state => {
 //    return {
 //      bars: state.bars.bars,
@@ -144,3 +145,20 @@ export default class NearbyBarScreen extends React.Component {
 //  }
  
 //  export default connect(mapStateToProps, mapDispatchToProps)(NearbyBarScreen)
+=======
+const mapStateToProps = state => {
+  return {
+    bars: state.bars.bars,
+    currentLongitude: state.customer.currentLongitude,
+    currentLatitude: state.customer.currentLatitude
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setCurrBar: currBar => dispatch(BarsActions.setCurrBar(currBar))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NearbyBarScreen)
+>>>>>>> [fix] bar image is rendered across menu views
