@@ -40,7 +40,6 @@ class BarLandingScreen extends React.Component {
     RNFetchBlob.fetch('GET', `${DOMAIN}/drinks/getall/`)
       .then(res => {
         this.setState({ fetching: false })
-        console.log('res of drinks', res)
         this.generateDrinksArrs(res.json())
       }).catch(err => {
         console.log('err in getting all drinks', err)
