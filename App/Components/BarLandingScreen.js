@@ -43,7 +43,7 @@ class BarLandingScreen extends React.Component {
         this.setState({ fetching: false })
         this.generateDrinksArrs(res.json())
       }).catch(err => {
-        console.log('err', err)
+        console.log('err in getting all drinks', err)
       })
   }
 
